@@ -1,0 +1,605 @@
+::-webkit-scrollbar { /* chrome based */
+    width: 0px;  /* ширина scrollbar'a */
+}
+
+body{
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	line-height: 1.6;
+	color: #333;
+}
+
+a {
+    color: red; /* Цвет ссылок */
+}
+
+a:visited {
+    color: #cecece; /* Цвет посещенных ссылок */
+}
+a:active {
+    color: #ffff00; /* Цвет активных ссылок */
+}
+
+h1, h2, h3, h4, h5, h6{
+	margin: 0;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+/*Плавное появление*/
+
+
+/*Интро*/
+.intro{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+	background: url("img/backgrounds/BG1.jpg") center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.intro__title{
+	color: #fff;
+	font-size: 70px;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 1;
+}
+
+.intro__title:after{
+	content: "";
+	display: block;
+	margin: 60px auto;
+	width: 180px;
+	height: 3px;
+	background-color: #fff;
+}
+
+.intro__title:before{
+	content: "";
+	display: block;
+	margin: 0 auto 60px;
+	width: 180px;
+	height: 3px;
+	background-color: #fff;
+
+}
+
+.intro__inner{
+	width: 100%;
+	max-width: 880px
+	margin: 0 auto;
+	text-align: center;
+}
+
+/*Контейнер*/
+.container{
+	width: 100%;
+	max-width: 1230px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+/*Шапка*/
+.header{
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	padding-top: 30px;
+}
+
+.header__inner{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__logo{
+	font-size: 30px;
+	font-weight: 700;
+	color: #fff;
+}
+
+.header.fixed{
+	padding: 10px 0;
+	background-color: #000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	transform: translate3d(0,0,0);
+}
+
+/*Навигация*/
+.nav{
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.nav__link{
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 10px;
+	position: relative;
+	color: #fff;
+	text-decoration: none;
+	transition: color .2s linear;
+}
+
+.nav__link:after{
+	content: "";
+	display: block;
+	width: 100%;
+	height: 3px;
+	opacity: 0;
+	transition: opacity .2s linear;
+	background-color: #fce38a;
+	position: absolute;
+	top: 100%;
+	left: 0px;
+	z-index: 1;	
+}
+
+.nav__link:hover{
+	color: #fce38a;
+}
+
+.nav__link:hover:after{
+	opacity: 1;
+}
+
+/*Кнопка*/
+.btn{
+	display: inline-block;
+	vertical-align: top;
+	padding: 8px 30px;
+	border: 4px solid #fff;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 700;
+	text-decoration: none;
+	transition: background .2s linear, color .2s linear;
+}
+
+.btn:hover{
+	background-color: #fff;
+	color: #333;
+}
+
+/*Контейнер*/
+
+.section{
+	padding: 80px 0;
+}
+
+.section--story{
+	background: url("img/backgrounds/BG3.jpg") center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.section--bestgames{
+	background: url("img/backgrounds/BG4.jpg") center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.section--contacs{
+	background: url("img/backgrounds/BG5.jpg") center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.section--buy{
+	background: url("img/backgrounds/BG2.jpg") center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.section--gray{
+	background: url("img/backgrounds/BG6.jpg") center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.section__header{
+	margin: 0 auto 40px;
+	width: 100%;
+	max-width: 950px;
+	text-align: center;
+}
+
+.section__title{
+	font-size: 48px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.section__title_buy{
+	font-size: 48px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.section__title:after{
+	content: "";
+	display: block;
+	width: 80px;
+	height: 4px;
+	background-color: #333;
+	margin: 30px auto;
+}
+
+.section__text{
+	font-size: 15px;
+	color: #f8f8f8;
+}
+
+.section__text_buy{
+	font-size: 15px;
+	color: #f8f8f8;
+}
+
+/*Картинки наша история*/
+.about{
+	margin-top: 80px -15px 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.about__item{	
+	width: 380px;
+}
+
+.about__item:hover .about__img{
+	transform: translate3d(-10px, -10px, 0);
+}
+
+.about__item:hover .about__img img{
+	opacity: 0.5;
+}
+
+.about__img{
+	background: linear-gradient(to bottom, #3B185F, #0F044C);
+	transition: transform .2s linear;
+}
+
+.about__img img{
+	display: block;
+	max-width: 100%;
+	height: auto;
+	transition: opacity .2s linear;
+}
+
+/*Статистика*/
+.staticstics{
+	background-color: #0F044C;
+}
+
+.stat{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.stat__item{
+	flex: 1 1 0;
+	padding: 70px 25px;
+	border-left: 1px solid #b5eae0;
+	text-align: center;
+	color: #fff;
+}
+
+.stat__item:last-child{
+	border-right: 1px solid #b5eae0;
+}
+
+.stat_count{
+	margin-bottom: 10px;
+	font-size: 72px;
+	font-weight: 700;
+}
+
+.stat_text{
+	font-size: 20px;
+	text-transform: uppercase;
+}
+
+/*Лучшие игры*/
+.bestgames{
+	display: flex;
+	margin-bottom: 50px;
+	flex-wrap: wrap;
+}
+
+.bestgames--up{
+	margin-bottom: 0px;
+}
+
+.bestgames__item{
+	padding-right: 40px;
+	position: relative;
+	flex: 1 1 0;
+	padding-left: 90px;
+}
+
+.bestgames__icon{
+	position: absolute;;
+	top: 0;
+	left: 10px;
+	z-index: 1;
+	transition: transform .2s linear;
+}
+
+.bestgames__icon:hover{
+	transform: translate3d(-10px, -10px, 0);
+}
+
+.bestgames__title{
+	font-size: 14px;
+	color: #fff;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+.bestgames__text{
+	font-size: 15px;
+	color: #999;
+}
+
+/*Отзывы*/
+
+.reviews{
+	position: relative;
+}
+
+.reviews .slick-slider{
+	padding: 0 110px;
+}
+
+.slick-slide, .slick-current, .slick-active{
+	outline: 0;
+}
+
+.reviews__item{
+	min-height: 210px;
+	padding-left: 205px;
+	position: relative;
+}
+
+.reviews__photo{
+	width: 145px;
+	height: 145px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.reviews__text{
+	margin-bottom: 15px
+	font-size: 24px;
+	font-weight: 300;
+	font-style: italic;
+	color: #999;
+}
+
+.reviews__author{
+	font-size: 24px;
+	font-style: bold;
+	color: #fff;
+}
+
+.reviews__author:before{
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	width: 60px;
+	height: 4px;
+	background-color: #f38181;
+	margin-right: 10px;
+}
+
+.slick-arrow{
+	display: block;
+	position: absolute;
+	top: 50%;
+	z-index: 1;
+	transition: translate(-50%);
+	font-size: 0;
+	color: transparent;
+	border: 0;
+	background: none;
+}
+
+.slick-arrow:focus{
+	outline: 0;
+}
+
+.slick-arrow:after{
+	content: "";
+	display: block;
+	width: 16px;
+	height: 16px;
+	border-top: 2px solid #ccc;
+	border-left: 2px solid #ccc;
+}
+
+.slick-prev{
+	left: 0;
+	transform: rotate(-45deg);
+}
+
+.slick-next{
+	right: 0;
+	transform: rotate(135deg);
+}
+
+/*MEDIA*/
+@media (max-width: 1230px){
+
+	/*Intro*/
+	.intro__title{
+		font-size: 60px;
+	}
+}
+
+@media (max-width: 990px){
+
+	/*Intro*/
+	.intro__title{
+		font-size: 50px;
+	}
+
+	/*statistics*/
+	.stat{
+		justify-content: center;
+	}
+
+	.stat__item{
+		flex: none;
+		width: 33.3333%;
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	/*reviews*/
+	.reviews__photo{
+		position: static;
+	}
+
+	.reviews__item{
+		padding-left: 0;
+	}
+}
+
+@media (max-width: 770px){
+
+	/*Intro*/
+	.intro__title{
+		font-size: 40px;
+	}
+
+	/*nav*/
+	.nav{
+		display: none;
+	}
+
+	/*section*/
+	.section{
+		padding: 40px 0;
+	}
+
+	/*about*/
+	.about{
+		justify-content: center;
+	}
+
+	.about__item{
+		width: 100%;
+		max-width: 410px;
+		margin-bottom: 30px;
+	}
+
+}
+
+@media (max-width: 575px){
+
+	/*Intro*/
+	.intro__title{
+		font-size: 30px;
+	}
+
+	.header__logo{
+		display: none;
+	}
+
+	/*nav*/
+	.nav{
+		display: none;
+	}
+
+	/*section*/
+	.section__title{
+		font-size: 24px;
+	}
+
+	/*statistics*/
+	.stat__item{
+		width: 100%;
+		border-bottom: 1px solid #b5eae0;
+	}
+
+	/*bestgames*/
+	.bestgames__item{
+		padding-bottom: 30px;
+		width: 100%;
+	}
+
+	/*reviews*/
+	.reviews__photo{
+		width: 90px;
+		height: 90px; 
+	}
+}
+
+@media (max-width: 350px){
+
+	/*Intro*/
+	.intro__title{
+		font-size: 20px;
+	}
+
+	.header__logo{
+		display: none;
+	}
+
+	/*section*/
+	.section__title{
+		font-size: 18px;
+	}
+
+	.section__text{
+		font-size: 10px;
+	}
+
+	/*statistics*/
+	.stat__item{
+		width: 100%;
+		border-bottom: 1px solid #b5eae0;
+	}
+
+	/*bestgames*/
+	.bestgames__item{
+		padding-bottom: 30px;
+		width: 100%;
+	}
+
+	/*about*/
+	.about{
+		justify-content: center;
+	}
+
+	.about__item{
+		width: 70%;
+		max-width: 410px;
+		margin-bottom: 30px;
+	}
+
+
+}
